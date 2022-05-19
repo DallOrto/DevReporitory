@@ -4,7 +4,7 @@ import { ICreateSpecificationDTO } from "./ISpecificationRepository";
 interface ICategoriesRepository {
     findByName(name: string):Category;
     list(): Category[];
-    create(name: ICreateSpecificationDTO, description: ICreateSpecificationDTO): void;
+    create({name, description}: ICreateSpecificationDTO): void;
 }
 
 export { ICategoriesRepository };
