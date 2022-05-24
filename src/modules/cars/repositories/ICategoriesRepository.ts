@@ -1,10 +1,15 @@
-import { Category } from "../model/Category";
-import { ICreateSpecificationDTO } from "./ISpecificationRepository";
+import { Category } from "../entities/Category";
 
-interface ICategoriesRepository {
-    findByName(name: string):Category;
-    list(): Category[];
-    create({name, description}: ICreateSpecificationDTO): void;
+
+interface ICreateCategoryDTO {
+    name: string;
+    description: string;
 }
 
-export { ICategoriesRepository };
+interface ICategoriesRepository {
+    findByName(name: string):Promise<Category>;
+    list(): Promise<Category[]>;
+    create({name, description}: ICreateCategoryDTO): Promise<void>;
+}
+
+export { ICategoriesRepository, ICreateCategoryDTO };
