@@ -36,7 +36,7 @@ describe("Create Category Controller", () => {
             }
         );
 
-        const { token } = responseToken.body;
+        const { refresh_token } = responseToken.body;
 
         await request(app).post("/categories").send(
             {
@@ -45,7 +45,7 @@ describe("Create Category Controller", () => {
             }
         ).set(
             {
-                Authorization: `Bearer ${token}`
+                Authorization: `Bearer ${refresh_token}`
             }
         );
 
