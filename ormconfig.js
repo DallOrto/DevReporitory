@@ -5,6 +5,7 @@ module.exports = {
      
     "migrations": ["./src/shared/infra/typeorm/migrations/*.ts"],
     "entities": ["./src/modules/**/entities/*.ts"],
+    "migrationsRun": true,
     "cli": {
       "migrationsDir": "./src/shared/infra/typeorm/migrations"
     }
