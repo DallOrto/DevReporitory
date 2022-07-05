@@ -8,9 +8,7 @@ module.exports = {
     "entities": ["./src/modules/**/entities/*.ts"],
     "migrationsRun": true,
     "extra": {
-      "ssl": {
-        "rejectUnauthorized": false
-      }
+      "ssl": true
     },
     "cli": {
       "migrationsDir": "./src/shared/infra/typeorm/migrations"
