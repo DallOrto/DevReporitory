@@ -6,6 +6,13 @@ module.exports = {
     "migrations": ["./src/shared/infra/typeorm/migrations/*.ts"],
     "entities": ["./src/modules/**/entities/*.ts"],
     "migrationsRun": true,
+    "ssl":
+    environment === "main"
+      ? {
+          rejectUnauthorized: false
+        }
+      : undefined,
+    
     "cli": {
       "migrationsDir": "./src/shared/infra/typeorm/migrations"
     }
