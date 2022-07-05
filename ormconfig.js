@@ -9,9 +9,9 @@ module.exports = {
     "migrationsRun": true,
     "ssl":
     
-    environment === "main"
+    "environment" === "main"
       ? {
-          rejectUnauthorized: false
+          "rejectUnauthorized": false
         }
       : undefined,
     
