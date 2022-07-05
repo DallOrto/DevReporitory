@@ -1,3 +1,4 @@
+const environment = process.env.ENVIRONMENT
 module.exports = {
     "type": "postgres",
     "url": process.env.DATABASE_URL,
@@ -7,6 +8,7 @@ module.exports = {
     "entities": ["./src/modules/**/entities/*.ts"],
     "migrationsRun": true,
     "ssl":
+    
     environment === "main"
       ? {
           rejectUnauthorized: false
