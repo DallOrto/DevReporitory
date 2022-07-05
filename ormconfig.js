@@ -10,6 +10,7 @@ module.exports = {
     "extra": {
       "ssl": true
     },
+    "options": { encrypt: false },
     "cli": {
       "migrationsDir": "./src/shared/infra/typeorm/migrations"
     }
