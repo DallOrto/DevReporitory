@@ -1,10 +1,11 @@
+import auth from "@config/auth";
 import { inject, injectable } from "tsyringe";
-import { IUsersRepository } from "../../repositories/IUsersRepository";
+
 import { compare } from "bcryptjs";
 import { sign } from "jsonwebtoken";
 import { AppError } from "../../../../shared/errors/AppError";
 import { IUsersTokensRepository } from "@modules/accounts/repositories/IUsersTokensRepository";
-import auth from "config/auth";
+import { IUsersRepository } from "../../repositories/IUsersRepository";
 import { IDateProvider } from "@shared/container/providers/DateProvider/IDateProvider";
 
 
